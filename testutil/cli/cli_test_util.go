@@ -133,7 +133,7 @@ func NetworkWithAccountObjects(t *testing.T, n int) (*network.Network, []types.U
 
 func NetworkWithTradeObjects(t *testing.T, n int) (*network.Network, []types.Trade) {
 	t.Helper()
-	cfg := app.DefaultConfig()
+	cfg := network.DefaultConfig()
 	state := types.GenesisState{}
 	require.NoError(t, cfg.Codec.UnmarshalJSON(cfg.GenesisState[types.ModuleName], &state))
 
